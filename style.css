@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #eee;
+}
+
+
+.transition-button {
+    background-color: lightblue;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    /* Smoothly transition the background-color over 0.3 seconds */
+    transition: background-color 0.3s ease;
+    transition-property: background-color, transform;
+    transition-duration: 0.3s, 0.2s;
+    transition-timing-function: ease, ease-in-out;
+}
+
+.transition-button:hover {
+    background-color: lightcoral;
+}
+
+
+.animation-box {
+    width: 50px;
+    height: 50px;
+    background-color: lightgreen;
+    /* Required for 'left' property to work */
+    position: relative;
+    /* Apply the 'move' animation */
+    animation: move 2s infinite alternate;
+    margin-top: 10px;
+}
+
+@keyframes move {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 200px;
+        /* Increased movement range for visibility */
+    }
+}
+
+
+.pseudo-list {
+    list-style: none;
+    /* Remove bullet points */
+    padding: 0;
+    max-width: 300px;
+}
+
+.pseudo-list li {
+    padding: 5px 10px;
+    margin-bottom: 2px;
+}
+
+.pseudo-list li:nth-child(odd) {
+    background-color: lightgray;
+}
+
+.pseudo-list li:nth-child(even) {
+    background-color: white;
+}
+
+.filter-image {
+    /* Apply 100% grayscale filter */
+    filter: bluescale(100%);
+    /* Smoothly transition the filter property over 0.3 seconds */
+    transition: filter 0.3s ease;
+    width: 200px;
+    /* Set a standard size for display */
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.filter-image:hover {
+    /* Remove grayscale filter on hover */
+    filter: grayscale(0%);
+}
+
+.quote {
+    position: relative;
+    padding-left: 20px;
+    font-style: italic;
+}
+
+.quote::before {
+    content: '“';
+    font-size: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: lightgray;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    color: #777;
+}
